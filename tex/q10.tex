@@ -63,7 +63,7 @@
     The core argument is that character-independence forces the effective form on $\Heff$ to be
     scalar under the $\mathfrak{su}(2)$ action, and the unique such form is the Casimir with value 2.
     The result is established conditionally on the O-series universality (structurally supported,
-    numerically confirmed for $q \leq 151$) and the bridge non-obstruction hypothesis of Q7\textendash Q9.
+    numerically confirmed for $q \leq 211$) and the bridge non-obstruction hypothesis of Q7\textendash Q9.
   \end{abstract}
 
   \bigskip
@@ -392,8 +392,9 @@ isomorphism $\Vphi : \Heff \xrightarrow{\sim} W_{\mathrm{sp}}$ of Q7 Conjecture~
           \item[(a)] proved structurally for the BI-parity sectors ($m=+1$ vs.\ $m=-1$, exact equality
           for all $q$);
           \item[(b)] established structurally for the three-direction count ($\Sigma_c(n_3) = 3$, O23);
-          \item[(c)] confirmed numerically for $q \in \{29, 61, 101, 151\}$ with decreasing inter-pair
-          variance (O25);
+          \item[(c)] confirmed numerically for $q \in \{29, 61, 101, 151, 211\}$ with strictly
+          decreasing inter-pair standard deviation
+          $\sigma_q \in \{0.539, 0.259, 0.161, 0.139, 0.109\}$ (O25~\cite{Beau2026a29});
           \item[(d)] open in full generality (complete analytical proof of~\eqref{eq:universality} for
           the rate $\varepsilon(q) \to 0$).
         \end{enumerate}
@@ -416,11 +417,15 @@ isomorphism $\Vphi : \Heff \xrightarrow{\sim} W_{\mathrm{sp}}$ of Q7 Conjecture~
         \toprule
         $q$ & $A_H(q)$ & $|A_H - 2|$ & $\Var_c[\dpair]^{1/2}$ \\
         \midrule
-        $61$ & $2.041$ & $0.041$ & $0.26$ \\
-        $101$ & $2.019$ & $0.019$ & $0.16$ \\
-        $151$ & $2.009$ & $0.009$ & $\approx 0.10$ \\
+        $61$  & $2.041$ & $0.041$ & $0.259$ \\
+        $101$ & $2.019$ & $0.019$ & $0.161$ \\
+        $151$ & $2.009$ & $0.009$ & $0.139$ \\
+        $211$ & (pending$^*$) & (pending$^*$) & $0.109$ \\
         \bottomrule
       \end{tabular}
+      \par\smallskip
+      \noindent{\small $^*$ $A_H(211)$ requires the full Q7 numerical pipeline;
+      the O25 inter-pair variance is available (O25~\cite{Beau2026a29}, Table~2).}
     \end{table}
 
     Both quantities decrease monotonically with $q$, consistent with Lemma~\ref{lem:su2-isotropy}:
@@ -428,7 +433,10 @@ isomorphism $\Vphi : \Heff \xrightarrow{\sim} W_{\mathrm{sp}}$ of Q7 Conjecture~
     The empirical fit $|A_H(q) - 2| \approx 0.264\,q^{-0.44}$ (Q7~\cite{Beau2026q7}) gives
     $\varepsilon(q) \sim q^{-0.44}$, consistent with an $O(q^{-1/2})$ upper bound from the BFS
     convergence rate (Q5b Theorem~3.2~\cite{Beau2026q5b}).
-    Runs in progress for $q \in \{211, 307, 401\}$ will extend Table~\ref{tab:o25} and allow
+    The O25 campaign has since extended the dataset to $q = 211$
+    ($\Var_c[\dpair]^{1/2} = 0.109$, 105 pairs, $M = 50$~\cite{Beau2026a29}),
+    consistent with the monotone decrease.
+    Runs for $q \in \{307, 401\}$ remain in progress and will allow
     discrimination between the exponent $\alpha = 0.44$ and $\alpha = 1/2$.
 
   \section{Consequences}\label{sec:consequences}
