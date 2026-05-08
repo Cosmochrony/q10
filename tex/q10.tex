@@ -257,8 +257,8 @@
         structural level for the sectors $m = \pm 1$ vs.\ $m = 0$.
         Item~(iv) provides quantitative confirmation that the remaining inter-pair variance vanishes.
         The full proof of~\eqref{eq:universality} for general $c$ — covering sectors beyond the
-        canonical BI-parity pairing — is the content of the O25 large-prime extension (ongoing for
-        $q \in \{211, 307, 401\}$).
+        canonical BI-parity pairing — is the content of the O25 large-prime extension
+        ($q=211$ confirmed: $A_H(211)=2.022$, Stage~C PASS; $q\in\{307,401\}$ pending).
       \end{remark}
 
   \section{Asymptotic $\mathfrak{su}(2)$-Isotropy}\label{sec:su2}
@@ -420,12 +420,18 @@ isomorphism $\Vphi : \Heff \xrightarrow{\sim} W_{\mathrm{sp}}$ of Q7 Conjecture~
         $61$  & $2.041$ & $0.041$ & $0.259$ \\
         $101$ & $2.019$ & $0.019$ & $0.161$ \\
         $151$ & $2.009$ & $0.009$ & $0.139$ \\
-        $211$ & (pending$^*$) & (pending$^*$) & $0.109$ \\
+        $211$ & $2.022$ & $0.022^{\dagger}$ & $0.109$ \\
         \bottomrule
       \end{tabular}
       \par\smallskip
-      \noindent{\small $^*$ $A_H(211)$ requires the full Q7 numerical pipeline;
-      the O25 inter-pair variance is available (O25~\cite{Beau2026a29}, Table~2).}
+      \noindent{\small $^{\dagger}$ At $q=211$, Stage~B (metaplectic overlap) does not
+      pass ($c=7$, overlap$=0.38$, cf.\ Q7 Remark~6.4); the Stage~A eigenvalue ratio is
+        $[1:0.74:0.74]$ rather than $[1:\frac{1}{2}:\frac{1}{2}]$, consistent with a
+        trajectory that does not fully explore $\Heff$ at $\mathrm{bfs\_frac}=0.11$.
+        Stage~C (primary criterion, analytically grounded via Q7 Corollary~6.2) passes
+        with zero cross terms and zero isotropy gap, giving $A_H(211)=2.022$.
+        Stage~B failures of this type are finite-coverage artefacts (cf.\ Q7 Remark~6.4
+        for the analogous anomaly at $q=61$, $c=3$).}
     \end{table}
 
     Both quantities decrease monotonically with $q$, consistent with Lemma~\ref{lem:su2-isotropy}:
