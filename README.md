@@ -1,7 +1,7 @@
 # Q10 — Asymptotic $\mathfrak{su}(2)$-Isotropy of the Effective Quadratic Form
 
 This repository contains the source of the **Q10 Cosmochrony paper**
-[*Asymptotic $\mathfrak{su}(2)$-Isotropy of the Effective Quadratic Form*](out/q10.pdf).
+*Asymptotic $\mathfrak{su}(2)$-Isotropy of the Effective Quadratic Form*.
 
 Papers Q7–Q9 establish that the effective operator $L_{\mathrm{eff}}$ on
 $\mathbb{R}_\tau \times \mathrm{Heis}_3(\mathbb{R})$ has principal symbol
@@ -40,7 +40,6 @@ q10/
 
 ## Links
 
-- 📄 [Paper PDF](out/q10.pdf)
 - 🔗 DOI: [10.5281/zenodo.19880900](https://doi.org/10.5281/zenodo.19880900)
 - 🌐 Website: https://cosmochrony.org/science/emergent-geometry/q10/
 
