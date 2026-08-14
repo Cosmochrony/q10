@@ -56,8 +56,9 @@
     Cosmochrony framework.
     The present paper proves $A_H \to 2$ from two structural inputs: (i) the asymptotic
     character-independence of the O-series spectral observables
-    ($\sigma_c(n) \to \sigma_*(n)$ uniformly in $c$ as $q \to \infty$, established structurally from
-    BI parity~\cite{Beau2026a26,Beau2026a27} and confirmed numerically by the O25
+    ($\sigma_c(n) \to \sigma_*(n)$ uniformly in $c$ as $q \to \infty$, supported structurally by the
+    conjugate-pair equality $\sigma_c = \sigma_{q-c}$ (the conjugation identity, O17; recalled in
+    O18 Theorem~3.1)~\cite{Beau2026a21,Beau2026a22} and confirmed numerically by the O25
     campaign~\cite{Beau2026a29}); and (ii) the uniqueness of the $\mathfrak{su}(2)$-invariant
     quadratic form on $\Sym^2(V_\rho)$ (Q7 Lemma~4.3~\cite{Beau2026q7}).
     The core argument is that character-independence forces the effective form on $\Heff$ to be
@@ -229,10 +230,13 @@
           Consequently, the $m = +1$ and $m = -1$ sectors are exactly equal:
           $\sigma_c = \sigma_{q-c}$ for all $c$ and $q$.
 
-          \item[(ii)] \textup{(Quaternionic minimality, O23~\cite{Beau2026a27}).}
-          The pair structure $\Sigma_c(n_3) = 3$ (three stable directions) is derived from the
-          BI-parity constraint and holds unconditionally.
-          This fixes the structure of $\sigma_*(n)$ within the fitting window.
+          \item[(ii)] \textup{(Supplied selection rule, O23~\cite{Beau2026a27}).}
+          The pair structure $\Sigma_c(n_3) = 3$ (three stable directions) is a supplied
+          selection rule: O23 proves the three-dimensionality of the neutral sector of a
+          supplied spinor carrier (Theorem~3.1), while the carrier selection and the
+          identification of $\Sigma_c$ with that dimension are open bridges.
+          Conditionally on that carrier, this fixes the structure of $\sigma_*(n)$ within the
+          fitting window.
 
           \item[(iii)] \textup{(Rank stability, O24~\cite{Beau2026a28}).}
           The observable rank is stable across conjugate pairs $(c, q-c)$ with the same exponent
@@ -245,7 +249,9 @@
       \end{proposition}
 
       \begin{proof}
-        Items~(i)\textendash(ii) are proved in O22\textendash O23~\cite{Beau2026a26,Beau2026a27}.
+        Item~(i) is proved in O22~\cite{Beau2026a26}.
+        Item~(ii) is conditional: O23~\cite{Beau2026a27} proves it for a supplied spinor carrier
+        (Theorem~3.1), and $\Sigma_c(n_3) = 3$ enters as a supplied selection rule.
         Item~(iii) is established in O24~\cite{Beau2026a28}.
         Item~(iv) is the main numerical result of O25~\cite{Beau2026a29}:
         the inter-pair variance of $\dpair$ is reported as $\sigma = 0.54$ at $q=29$, $\sigma = 0.26$
@@ -253,8 +259,9 @@
       \end{proof}
 
       \begin{remark}[Scope of \textup{[U]}]\label{rem:U-scope}
-        Items~(i)\textendash(iii) of Proposition~\ref{prop:structural-U} establish~[U] at the
-        structural level for the sectors $m = \pm 1$ vs.\ $m = 0$.
+        Items~(i) and~(iii) of Proposition~\ref{prop:structural-U} establish~[U] at the
+        structural level for the sectors $m = \pm 1$ vs.\ $m = 0$; item~(ii) contributes
+        conditionally on the supplied rank-three carrier.
         Item~(iv) provides quantitative confirmation that the remaining inter-pair variance vanishes.
         The full proof of~\eqref{eq:universality} for general $c$ — covering sectors beyond the
         canonical BI-parity pairing — is the content of the O25 large-prime extension
@@ -391,7 +398,8 @@ isomorphism $\Vphi : \Heff \xrightarrow{\sim} W_{\mathrm{sp}}$ of Q7 Conjecture~
         \begin{enumerate}
           \item[(a)] proved structurally for the BI-parity sectors ($m=+1$ vs.\ $m=-1$, exact equality
           for all $q$);
-          \item[(b)] established structurally for the three-direction count ($\Sigma_c(n_3) = 3$, O23);
+          \item[(b)] conditional for the three-direction count: $\Sigma_c(n_3) = 3$ is a supplied
+          selection rule, proved by O23 only for a supplied spinor carrier (Theorem~3.1);
           \item[(c)] confirmed numerically for $q \in \{29, 61, 101, 151, 211\}$ with strictly
           decreasing inter-pair standard deviation
           $\sigma_q \in \{0.539, 0.259, 0.161, 0.139, 0.109\}$ (O25~\cite{Beau2026a29});
