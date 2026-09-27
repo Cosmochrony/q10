@@ -11,7 +11,7 @@
  pdftitle={Toward Coefficient Isotropy from Character Uniformity: A Stability Lemma and Its Missing Geometric Inputs},
  pdfauthor={J\'er\^ome Beau},
  pdfkeywords={Heisenberg group; Weil representation; spectral universality; Gram-Schmidt rank increment;
- conjugation; su(2)-invariant forms; Schur lemma; coefficient isotropy; emergent geometry; Cosmochrony}
+ complex conjugation; su(2)-invariant forms; Schur's lemma; coefficient isotropy; emergent geometry; Cosmochrony}
 }
 \usepackage{geometry}
 \usepackage{booktabs}
@@ -76,7 +76,8 @@
     to a positive factor, so the value 2 determines no coefficient.
     Exact conjugation parity holds for conjugately matched fingerprint data with an identical normalisation, which
     the published pair campaign, sampling its blocks independently, does not meet.
-    Parity, a three-dimensional neutral sector, rank stability and concentrated pair exponents do not imply [U].
+    Parity and concentrated pair exponents do not imply [U], and a three-dimensional neutral sector and rank
+    stability constrain none of its amplitudes.
     The available compression entries are Rayleigh-quotient identities of the discrete Weil Laplacian, not
     coefficients; no coefficient value is derived.
     Interpretive outlook: along this route, relative isotropy would be inherited from the uniformity of the
@@ -104,15 +105,20 @@
       hypothesis [H-lift], a leading-order effective co-metric $\mathrm{diag}(-A_\tau, A_H, A_H, 0)$ on
       $\mathbb{R}_\tau \times \Heis_3(\mathbb{R})$ (Q5b Theorem~5.2).
       Its spatial principal form has rank two everywhere, and the central slot is empty.
-      Paper Q9~\cite{Beau2026q9} proves a kinetic Mosco statement under explicit inputs and does not discharge
-      [H-lift].
+      Paper Q9~\cite{Beau2026q9} proves a kinetic Mosco statement under explicit inputs and states that its results
+      do not discharge [H-lift]; Q5b Remark~5.3 relays [H-lift] as proved in Q9, and the statement of Q9 itself is
+      the one used here.
       Paper Q7~\cite{Beau2026q7} states what an equivariant identification between the three-dimensional admissible
       space $\Heff$ and a three-dimensional spatial sector would require.
       A positive rank-three spatial form must come from a new construction beyond Q5b's operator (Q7
       Conjecture~4.7); if one is supplied together with the compatibility conditions of Q7, its pullback to the
       spin-one module has a graded form with two positive coefficients, a horizontal $A_H$ and a central $A_Z$
       (Q7 Lemma~4.5).
-      Neither coefficient is evaluated anywhere in the corpus.
+      Q5b (abstract and Remark~5.4) relays the values $A_H = 2$ and $A_Z = 2$, attributing them to the present
+      paper and to Q8.
+      Neither value is established from inputs that fix it: Theorem~\ref{thm:main} below derives no value of
+      $A_H$, and Q8~\cite{BeauQ8} shows that the Heisenberg commutator supplies no central coefficient and that
+      $\mathfrak{su}(2)$-invariance leaves the common value of an isotropic form free.
 
       The present paper asks a narrower question: what can uniformity of the O-series fingerprint observable across
       characters contribute to the equality $A_H = A_Z$, and what else would be needed to reach a value?
@@ -178,13 +184,15 @@
 
       \begin{hypo}[{[T]}, supplied target]
         For each $q$ there is a candidate continuum operator $L_{\mathrm{ext}}$ (Q7 Criterion~5.1) whose spatial
-        form is positive of rank three, together with [ID], [ACT], [INV] and [ADAPT], such that the transported form
-        on $\Sym^2(V_\rho)$ is $A_H(q)\,Q_\pm + A_Z(q)\,Q_0$ with $A_H(q), A_Z(q) > 0$, where $Q_\pm$ and $Q_0$ are
+        form is positive of rank three, together with [ID], [ACT], [INV] and [ADAPT], such that its pullback along the
+        adapted isomorphism $\varphi_0$ to $\Sym^2(V_\rho)$ is $A_H(q)\,Q_\pm + A_Z(q)\,Q_0$ with $A_H(q),
+        A_Z(q) > 0$, where $Q_\pm$ and $Q_0$ are
         the projections onto $\spn\{e_+, e_-\}$ and $\spn\{e_0\}$ (Q7 Lemma~4.5(3)).
       \end{hypo}
 
       By Q7 Lemma~4.5(3), the transport along $\lambda\varphi_0$ multiplies both coefficients by $|\lambda|^2$; the
-      ratio $A_H/A_Z$ does not depend on that choice.
+      ratio $A_H/A_Z$ does not depend on that choice, and along $\varphi_0$ the coefficients are the entries of the
+      spatial form in the adapted frame.
 
     \subsection{The fingerprint observable}
 
@@ -199,14 +207,17 @@
       \end{equation}
       where $\delta r_n(b)$ is the number of Weil fingerprint vectors of block $b$ in the shell $S_n$ that are
       linearly independent of the Gram--Schmidt span built over the shells $0, \dots, n-1$ (O25, Section~2.1).
+      Processing the vectors of $S_n$ one at a time, each against the span of everything processed before it, this
+      count equals the increase of the dimension of the span from shell $n-1$ to shell $n$; we use it in that sense.
       It is a rank increment, an integer, not a spectral quantity; U1~\cite{Beau2026u1} records the same typing.
+      Independence is understood in exact arithmetic.
       The pair observable of a conjugate pair is
       \begin{equation}\label{eq:sigmapair}
         \spair(n) := \sigma_b(n)\,\sigma_{b'}(n),
       \end{equation}
       where $b$ has character $c$ and $b'$ has character $q - c$; in O25 the remaining entries of $b$ and $b'$ are
       sampled independently and uniformly (O25, Section~2.2).
-      The pair exponent $\dpair$ is the least-squares slope of $\log \spair$ against $\log(n+1)$ over an
+      The pair exponent $\dpair$ is minus the least-squares slope of $\log \spair$ against $\log(n+1)$ over an
       auto-calibrated fitting window.
 
     \subsection{Sector assignment, response law and scale}
@@ -273,8 +284,8 @@
         The following statements hold.
         \begin{enumerate}
           \item[(i)] \textup{(Conjugation.)}
-          For conjugately matched fingerprint data with an identical normalisation, $\sigma_{\bar b} = \sigma_b$ at
-          every depth (Lemma~\ref{lem:conjugation}).
+          If a block $\bar b$ is conjugately matched to a block $b$, with an identical normalisation, then
+          $\sigma_{\bar b} = \sigma_b$ at every depth (Lemma~\ref{lem:conjugation}).
           O17~\cite{Beau2026a21} proves exact equality of raw redundancy counts in its own scalar Weil model,
           where the count is in fact independent of the block (O17 Theorem~2.1 and Corollary~2.3), and states that
           this model is not shown to coincide with the O12/O13 pipeline.
@@ -291,13 +302,14 @@
           This fixes no amplitude profile of $\sigma_b$.
 
           \item[(iii)] \textup{(Rank stability.)}
-          O24~\cite{Beau2026a28} excludes observable-rank changes induced by vertical fibre structure.
+          O24~\cite{Beau2026a28} excludes observable-rank changes induced by vertical fibre structure, conditionally
+          on the supplied carrier and fibre hypotheses.
           This bounds no relative deviation of $\sigma_b(n)$ from a common profile.
 
           \item[(iv)] \textup{(Exponent concentration.)}
           O25~\cite{Beau2026a29} reports inter-pair standard deviations of the fitted pair exponent
           $0.539, 0.259, 0.161, 0.139, 0.109$ for $q = 29, 61, 101, 151, 211$, and $0.133, 0.214, 0.194$ for
-          $q = 307, 401, 601$ from $24$, $12$ and $12$ sampled pairs (O25 Section~3.2 and Table~3).
+          $q = 307, 401, 601$ from $24$, $12$ and $12$ sampled pairs (O25 Sections~3.2 and~3.4, Table~3).
           These concern fitted slopes of pair products, not the amplitudes $\sigma_b(n)$ block by block.
 
           \item[(v)] \textup{(No implication.)}
@@ -308,20 +320,24 @@
 
       \begin{proof}
         Items (i) to (iv) are statements about the cited sources at the locations given.
-        For (v), fix a positive function $f$ on $\Nq$ and set $\sigma_b(n) = a_b\,f(n)$ with $a_b \in \{1, 2\}$,
-        $a_{\bar b} = a_b$ for every conjugate pair, and both values occurring in $\Bq$.
+        For (v), let $f(n) = C\,(n+1)^{-\delta/2}$ on $\Nq$ and set $\sigma_b(n) = a_b\,f(n)$ with
+        $a_b \in \{1, 2\}$, $a_{\bar b} = a_b$ for every conjugately matched pair, and both values occurring in $\Bq$.
         Parity holds exactly.
-        Every pair product is $a_b^2 f(n)^2$, whose logarithm has slope independent of the pair, so all fitted
-        pair exponents coincide and their spread is zero.
+        Every pair product, for matched or independently sampled pairs alike, is $a_b a_{b'} f(n)^2$, whose
+        logarithm is affine in $\log(n+1)$ with slope $-\delta$ on every subwindow, so all fitted pair exponents
+        coincide, whatever the fitting window, and their spread is zero.
         If~\eqref{eq:universality} held with rate $\varepsilon$, a block with $a_b = 2$ and a block with $a_b = 1$
         would give $2f(n) \leq (1+\varepsilon)\sigma_*(n)$ and $f(n) \geq (1-\varepsilon)\sigma_*(n)$, hence
         $2(1-\varepsilon) \leq 1 + \varepsilon$, that is $\varepsilon \geq 1/3$.
+        The data are abstract; the statement is one of non-implication, and it does not require them to be realised
+        as rank-increment ratios.
       \end{proof}
 
       \begin{remark}[Scope of \textup{[U]}]\label{rem:U-scope}
         Hypothesis~[U] is open.
         U1~\cite{Beau2026u1} proves that no modulus of continuity in the reduced character can be inferred from the
-        individual Heisenberg--Schr\"odinger generators, which are equidistant across distinct central characters,
+        multiplication generators of the Heisenberg--Schr\"odinger representations, which are equidistant across
+        distinct central characters,
         and locates a possible proof in the rank increment of the fingerprint filtration.
         Because $\sigma_b(n)$ is a ratio of integers with denominator $|S_n|$, a relative bound with small
         $\varepsilon$ on a fixed window is a combinatorial statement about Gram--Schmidt collisions.
@@ -333,7 +349,7 @@
     \subsection{Conditions for exact conjugation parity}
 
       Write $\omega = e^{2\pi i/q}$ and let $\rho_c$ act on $\mathbb{C}^q$ by
-      $[\rho_c(a, b, t)\psi](x) = \omega^{c(bx+t)}\psi(x - a)$, the convention of O17.
+      $[\rho_c(u, v, t)\psi](x) = \omega^{c(vx+t)}\psi(x - u)$, the convention of O17.
       Then $\rho_{q-c}(g) = \overline{\rho_c(g)}$ entrywise in the standard basis, for every
       $g \in \Heis_3(\mathbb{Z}/q\mathbb{Z})$.
 
@@ -364,7 +380,7 @@
       This paper does not verify that the O12/O13 construction of the fingerprint of a block
       $(c_1, c_2, c_3)$ has the seeded form, nor which block is conjugately matched to it.
       The O25 campaign samples the remaining entries of the two blocks of a pair independently, so its paired blocks
-      are not conjugately matched and the lemma gives no pointwise equality for them.
+      are not selected to be conjugately matched and the lemma gives no pointwise equality for them.
       If a sampling rule maps each sampled block bijectively to a conjugately matched one and preserves the sampling
       weights, the lemma transfers to equality of the sampled statistics.
       Equality of observables is a spectral equivalence of blocks; it does not make a conjugate pair a fibre of the
@@ -386,7 +402,8 @@
         \begin{equation}\label{eq:ratio-bound}
           \left|\frac{a}{a'} - 1\right| \;\leq\; \frac{2\,\varepsilon}{1 - \varepsilon}.
         \end{equation}
-        The bound is attained when the supports of $\alpha$ and $\alpha'$ are disjoint.
+        The bound is sharp: when the supports of $\alpha$ and $\alpha'$ are disjoint, equality holds for suitable data
+        satisfying the hypothesis.
         If $\varepsilon \leq \frac12$, the right-hand side is at most $4\varepsilon$.
       \end{lemma}
 
@@ -413,9 +430,11 @@
       $a/a' = \sum_n \nu(n)s(n) / \sum_n \nu'(n)s(n)$, which need not equal one.
 
       \begin{remark}[Role of conjugation parity]\label{rem:biparity-role}
-        Under the hypotheses of Lemma~\ref{lem:conjugation}, and if the sector set $\Cpm$ is closed under a
-        conjugate matching that preserves the weights $\alpha_H$, the averages over the blocks assigned to weight
-        $+1$ and to weight $-1$ agree exactly.
+        Split $\Cpm = \mathcal{C}_+ \sqcup \mathcal{C}_-$ according to the two nonzero weights.
+        Under the hypotheses of Lemma~\ref{lem:conjugation}, and if a conjugate matching maps $\mathcal{C}_+$
+        bijectively onto $\mathcal{C}_-$ and preserves the weights $\alpha_H$, the averages over
+        $\mathcal{C}_+$ and over
+        $\mathcal{C}_-$ agree exactly.
         This compares the two nonzero weights with each other; it says nothing about the comparison between the
         weight $\pm 1$ sector and the weight $0$ sector, which is the content of $A_H = A_Z$.
         The equality of the two horizontal coefficients in the real spatial form comes from the compatibility [INV]
@@ -494,34 +513,34 @@
   \section{The Available Numbers}\label{sec:numerical}
 
     Table~\ref{tab:o25} lists, for the character $c = 7$ at the four O25 checkpoints, the stored mode index $k$, the
-    corresponding diagonal entry of the three-row compression of the discrete Weil Laplacian computed in Q7, its gap
-    to the flat-mode entry, and the O25 inter-pair spread of fitted pair exponents.
+    corresponding diagonal entry of the three-row compression of the discrete Weil Laplacian computed in Q7 and its
+    gap $\Delta$ to the flat-mode entry; the gap for $c = 3$; and, separately, the O25 inter-pair spread of fitted
+    pair exponents, which concerns all sampled pairs and is a different quantity.
 
     \begin{table}[h]
       \centering
-      \caption{Q7 compression entries for the character $c = 7$, and O25 spread of fitted pair exponents over all
-      sampled pairs, by prime $q$.}
+      \caption{Q7 compression entries for $c = 7$ and gaps for $c = 7$ and $c = 3$, and the O25 spread of fitted
+      pair exponents over all sampled pairs, by prime $q$.}
       \label{tab:o25}
-      \begin{tabular}{ccccc}
+      \begin{tabular}{cccccc}
         \toprule
-        $q$ & $k$ & $2 + 4\sin^2(\pi k/q)$ & $\Delta = 4\sin^2(\pi k/q)$ & spread of $\dpair$ \\
+        $q$ & $k$ ($c=7$) & $2 + 4\sin^2(\pi k/q)$ & $\Delta$ ($c=7$) & $\Delta$ ($c=3$) & spread of $\dpair$ \\
         \midrule
-        $61$  & $2$ & $2.042289$ & $0.042289$ & $0.259$ \\
-        $101$ & $3$ & $2.034730$ & $0.034730$ & $0.161$ \\
-        $151$ & $4$ & $2.027639$ & $0.027639$ & $0.139$ \\
-        $211$ & $5$ & $2.022128$ & $0.022128$ & $0.109$ \\
+        $61$  & $2$ & $2.042289$ & $0.042289$ & $0.094729$ & $0.259$ \\
+        $101$ & $3$ & $2.034730$ & $0.034730$ & $0.095974$ & $0.161$ \\
+        $151$ & $4$ & $2.027639$ & $0.027639$ & $0.084242$ & $0.139$ \\
+        $211$ & $5$ & $2.022128$ & $0.022128$ & $0.088020$ & $0.109$ \\
         \bottomrule
       \end{tabular}
     \end{table}
 
-    The first three columns are identities, not measurements.
+    The columns derived from Q7 are identities, not measurements.
     The stored rows are pure Fourier modes of indices $\{0, -k, +k\}$, and each diagonal entry of the compression
     is the Rayleigh quotient $4 - 2\cos(2\pi m/q)$: exactly $2$ at the flat mode and $2 + 4\sin^2(\pi k/q)$ at the
     selected index (Q7 equations~(9)--(10) and Tables~1--2~\cite{Beau2026q7}).
     These entries are not coefficients of a continuum spatial form, and $\Delta$ is not an anisotropy.
     Its vanishing as $q \to \infty$ is equivalent to $\mathrm{dist}(k(q,c)/q, \mathbb{Z}) \to 0$, a property of
-    the mode-selection rule (Q7 Conjecture~6.7); for $c = 3$ the sequence $\Delta(q)$ is
-    $0.094729, 0.095974, 0.084242, 0.088020$ and does not decrease.
+    the mode-selection rule (Q7 Conjecture~6.7); for $c = 3$ the sequence $\Delta(q)$ is not monotone.
     A power law fitted to the $c = 7$ column measures the growth of the selected index and supports no spectral
     rate.
 
@@ -550,9 +569,10 @@
         The temporal block is the stated assumption.
       \end{proof}
 
-      The value $a_* = 2$ enters only if [S] supplies it by a construction independent of $A_H$.
-      The Lorentzian signature of Q5b Theorem~6.1 concerns Q5b's own operator, conditional on [H-L] and a
-      hyperbolicity hypothesis; it is not a statement about $L_{\mathrm{ext}}$.
+      No particular value of $a_*$, including $2$, is singled out; a value enters only through [S].
+      The corollary takes $A_\tau$ independent of $q$.
+      The Lorentzian signature of Q5b Theorem~6.1 concerns Q5b's own operator, conditional on Q5b Theorem~5.2,
+      hence on [H-L] and [H-lift], and on a hyperbolicity hypothesis; it is not a statement about $L_{\mathrm{ext}}$.
 
     \subsection{Status of the bridge question}
 
@@ -560,7 +580,8 @@
       it, and it does not establish that conjecture in any case, isotropic or not.
       Even when a supplied target is isotropic in the adapted frame, its equality with a transported Casimir form
       requires a scale to be specified (Q7 Remark~6.9).
-      Problem Q5b-O2, the full-rank extension of Q5b's co-metric, is open.
+      Problem Q5b-O2, the full-rank extension of Q5b's co-metric, is open: Q5b Remark~5.4 relays it as resolved
+      through Q8, while Q8 shows that no lower-order correction of Q5b's operator produces a central coefficient.
 
     \subsection{Open inputs}
 
@@ -593,7 +614,7 @@
     \subsection{Interpretive outlook}
 
       \emph{This subsection is interpretation, not a result.}
-      The structure of the argument separates two questions that a single number had merged.
+      The structure of the argument separates two questions that a single number can appear to settle together.
       Relative isotropy, the equality of the horizontal and central coefficients, is the kind of property that could
       be inherited from the admissible fibre: if the geometric coefficients respond linearly to fingerprint data,
       then a fibre that looks the same from every character would produce a space that looks the same in every

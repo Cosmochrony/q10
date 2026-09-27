@@ -12,7 +12,7 @@ question. The observable $\sigma_b(n) = \delta r_n(b)/|S_n|$ is a Gram–Schmidt
 
 - **Stability lemma (unconditional).** If data $x_{i,n}$ satisfy $|x_{i,n} - s(n)| \le \varepsilon\, s(n)$ with
   $s > 0$ and $\varepsilon < 1$, any two averages with a common depth weighting have a ratio within
-  $2\varepsilon/(1-\varepsilon)$ of one; the bound is attained.
+  $2\varepsilon/(1-\varepsilon)$ of one; the bound is sharp.
 - **Conditional coefficient isotropy (Theorem 1.1).** Under the uniformity hypothesis [U], a sector assignment [W],
   a linear response law [R] and a supplied positive rank-three target [T],
   $|A_H/A_Z - 1| \le 2\varepsilon/(1-\varepsilon)$. The absolute value follows only from an independently supplied
@@ -20,16 +20,17 @@ question. The observable $\sigma_b(n) = \delta r_n(b)/|S_n|$ is a Gram–Schmidt
 - **Invariance fixes no coefficient.** Invariant Hermitian forms on the spin-one module form one ray; the Casimir
   acts as $2$, but this singles out a normalisation, not a coefficient.
 - **Exact conjugation parity** holds for conjugately matched fingerprint data with an identical normalisation. The
-  O25 campaign samples its paired blocks independently and does not meet this condition.
-- **The inputs cited for [U] do not imply it.** Parity, a three-dimensional neutral sector, rank stability and
-  concentrated pair exponents are compatible with the failure of [U] for every $\varepsilon < 1/3$.
+  O25 campaign samples its paired blocks independently and does not select them to meet this condition.
+- **The inputs cited for [U] do not imply it.** Exact parity and identical pair exponents are compatible with the
+  failure of [U] for every $\varepsilon < 1/3$; a three-dimensional neutral sector and rank stability constrain none
+  of its amplitudes.
 - The Q7 compression entries $2 + 4\sin^2(\pi k/q)$ are Rayleigh-quotient identities of the discrete Weil
   Laplacian, not metric coefficients. No coefficient value is derived.
 
 ## Keywords
 
 Heisenberg group, Weil representation, spectral universality, Gram–Schmidt rank increment, complex conjugation,
-su(2)-invariant forms, Schur's lemma, coefficient isotropy, emergent geometry.
+su(2)-invariant forms, Schur's lemma, coefficient isotropy, emergent geometry, Cosmochrony.
 
 ## Repository Contents
 
