@@ -77,7 +77,7 @@
     Exact conjugation parity holds for conjugately matched fingerprint data with an identical normalisation, which
     the published pair campaign, sampling its blocks independently, does not meet.
     Parity and concentrated pair exponents do not imply [U], and a three-dimensional neutral sector and rank
-    stability constrain none of its amplitudes.
+    stability constrain none of the amplitudes that [U] bounds.
     The available compression entries are Rayleigh-quotient identities of the discrete Weil Laplacian, not
     coefficients; no coefficient value is derived.
     Interpretive outlook: along this route, relative isotropy would be inherited from the uniformity of the
@@ -117,8 +117,9 @@
       Q5b (abstract and Remark~5.4) relays the values $A_H = 2$ and $A_Z = 2$, attributing them to the present
       paper and to Q8.
       Neither value is established from inputs that fix it: Theorem~\ref{thm:main} below derives no value of
-      $A_H$, and Q8~\cite{BeauQ8} shows that the Heisenberg commutator supplies no central coefficient and that
-      $\mathfrak{su}(2)$-invariance leaves the common value of an isotropic form free.
+      $A_H$, and Q8~\cite{BeauQ8} shows that the Heisenberg commutator supplies neither a constant positive central
+      coefficient nor a rank-three symbol, and that $\mathfrak{su}(2)$-invariance leaves the common value of an
+      isotropic form free.
 
       The present paper asks a narrower question: what can uniformity of the O-series fingerprint observable across
       characters contribute to the equality $A_H = A_Z$, and what else would be needed to reach a value?
@@ -210,8 +211,8 @@
       \end{equation}
       where $\delta r_n(b)$ is the number of Weil fingerprint vectors of block $b$ in the shell $S_n$ that are
       linearly independent of the Gram--Schmidt span built over the shells $0, \dots, n-1$ (O25, Section~2.1).
-      Processing the vectors of $S_n$ one at a time, each against the span of everything processed before it, this
-      count equals the increase of the dimension of the span from shell $n-1$ to shell $n$; we use it in that sense.
+      We read this count as the increase of the dimension of the span from shell $n-1$ to shell $n$, which is the
+      value of the sequential count in which each vector of $S_n$ is tested against everything processed before it.
       It is a rank increment, an integer, not a spectral quantity; U1~\cite{Beau2026u1} records the same typing.
       Independence is understood in exact arithmetic.
       The pair observable of a conjugate pair is
@@ -352,7 +353,7 @@
     \subsection{Conditions for exact conjugation parity}
 
       Write $\omega = e^{2\pi i/q}$ and let $\rho_c$ act on $\mathbb{C}^q$ by
-      $[\rho_c(u, v, t)\psi](x) = \omega^{c(vx+t)}\psi(x - u)$, the convention of O17.
+      $[\rho_c(g_1, g_2, t)\psi](x) = \omega^{c(g_2 x+t)}\psi(x - g_1)$, the convention of O17.
       Then $\rho_{q-c}(g) = \overline{\rho_c(g)}$ entrywise in the standard basis, for every
       $g \in \Heis_3(\mathbb{Z}/q\mathbb{Z})$.
 
@@ -584,7 +585,8 @@
       Even when a supplied target is isotropic in the adapted frame, its equality with a transported Casimir form
       requires a scale to be specified (Q7 Remark~6.9).
       Problem Q5b-O2, the full-rank extension of Q5b's co-metric, is open: Q5b Remark~5.4 relays it as resolved
-      through Q8, while Q8 shows that no lower-order correction of Q5b's operator produces a central coefficient.
+      through Q8, while Q8 shows that no lower-order correction of Q5b's operator produces a rank-three principal
+      symbol or a constant positive central coefficient.
 
     \subsection{Open inputs}
 

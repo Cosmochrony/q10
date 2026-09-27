@@ -23,7 +23,7 @@ question. The observable $\sigma_b(n) = \delta r_n(b)/|S_n|$ is a Gram–Schmidt
   O25 campaign samples its paired blocks independently and does not select them to meet this condition.
 - **The inputs cited for [U] do not imply it.** Exact parity and identical pair exponents are compatible with the
   failure of [U] for every $\varepsilon < 1/3$; a three-dimensional neutral sector and rank stability constrain none
-  of its amplitudes.
+  of the amplitudes that [U] bounds.
 - The Q7 compression entries $2 + 4\sin^2(\pi k/q)$ are Rayleigh-quotient identities of the discrete Weil
   Laplacian, not metric coefficients. No coefficient value is derived.
 
