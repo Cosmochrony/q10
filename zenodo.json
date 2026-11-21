@@ -3,5 +3,6 @@
   "web_url": "https://cosmochrony.org/science/emergent-geometry/q10/",
   "main_tex": "tex/q10.tex",
   "zenodo_id": 19880900,
-  "doi": "10.5281/zenodo.19880900"
+  "doi": "10.5281/zenodo.19880900",
+  "notes": "Version 2.0.2. The bibliography entry for O22 carries its version-1.19 title, 'Projection Locking of the Saturation Depth: A Discrete Admissibility Theorem under Born-Infeld Saturation' (formerly 'Shell-Alignment from Projection Locking'). No other change."
 }
